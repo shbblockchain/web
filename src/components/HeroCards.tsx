@@ -36,8 +36,8 @@ export const HeroCards = () => {
   const totalCost = monthlyCost * months;
   const unitLabel = tier === "Value" || tier === "Alloy" ? "/ M" : "/ Match";
 
-  const message = `Halo, saya ingin memesan paket ${tier} selama ${months} bulan dengan total ${formatRupiah(totalCost)}`;
-  const whatsappLink = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`;
+  const message = `Halo, saya ingin memesan paket ${tier} untuk ${months} dengan total biaya ${formatRupiah(totalCost)}`;
+  const whatsappLink = `https://wa.me/6287711966723?text=${encodeURIComponent(message)}`;
 
   return (
     <div className="w-full max-w-xl mx-auto">
