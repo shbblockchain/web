@@ -3,6 +3,7 @@ import { Hero } from "./components/Hero";
 import { Navbar } from "./components/Navbar";
 import { ScrollToTop } from "./components/ScrollToTop";
 import "./App.css";
+import { FAQ } from "./components/FAQ";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Navbar />
       <Hero />
       <About />
+      <FAQ />
       <ScrollToTop />
     </>
   );

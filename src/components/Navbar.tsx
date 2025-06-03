@@ -15,7 +15,7 @@ import {
 import { buttonVariants } from "./ui/button";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
-import { LogoIcon } from "./Icons";
+import Logo from "../assets/pilot.png";
 
 interface RouteProps {
   href: string;
@@ -24,16 +24,12 @@ interface RouteProps {
 
 const routeList: RouteProps[] = [
   {
-    href: "#features",
-    label: "Features",
-  },
-  {
-    href: "#testimonials",
-    label: "Testimonials",
-  },
-  {
-    href: "#pricing",
+    href: "#home",
     label: "Pricing",
+  },
+  {
+    href: "https://google.com",
+    label: "Testimonials",
   },
   {
     href: "#faq",
@@ -49,13 +45,14 @@ export const Navbar = () => {
         <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between ">
           <NavigationMenuItem className="font-bold flex">
             <a
-              rel="noreferrer noopener"
-              href="/"
-              className="ml-2 font-bold text-xl flex"
-            >
-              <LogoIcon />
-              Jendral Store
-            </a>
+  rel="noreferrer noopener"
+  href="/"
+  className="ml-2 font-bold text-xl flex items-center"
+>
+  <img src={Logo} alt="Logo" className="w-6 h-6 mr-2" />
+  Jendral Store
+</a>
+
           </NavigationMenuItem>
 
           {/* mobile */}

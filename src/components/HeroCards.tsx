@@ -22,7 +22,7 @@ const formatRupiah = (value: number) =>
 
 export const HeroCards = () => {
   const [users] = useState(1);
-  const [months, setMonths] = useState(1);
+  const [months, setMonths] = useState<string>(""); // kosong saat awal
   const [tier, setTier] = useState<"Value" | "Alloy" | "ZeroDam" | "SpaceCity">("Value");
 
   const pricing = {
@@ -32,14 +32,15 @@ export const HeroCards = () => {
     SpaceCity: 20000,
   };
 
+  // Jika input kosong, anggap 1 sebagai default
+  const monthsNumber = months === "" ? 1 : parseInt(months);
   const monthlyCost = users * pricing[tier];
-  const totalCost = monthlyCost * months;
+  const totalCost = monthlyCost * monthsNumber;
   const unitLabel = tier === "Value" || tier === "Alloy" ? "/ M" : "/ Match";
   const tierLabel = tier === "Value" || tier === "Alloy" ? "M" : "X Joki";
 
-  const message = `Halo, saya ingin memesan paket ${tier} untuk ${months} ${tierLabel}  dengan total biaya ${formatRupiah(totalCost)}`;
+  const message = `Halo, saya ingin memesan paket ${tier} untuk ${monthsNumber} ${tierLabel}  dengan total biaya ${formatRupiah(totalCost)}`;
   const whatsappLink = `https://wa.me/6287711966723?text=${encodeURIComponent(message)}`;
-
 
   return (
     <div className="w-full max-w-xl mx-auto">
@@ -59,7 +60,14 @@ export const HeroCards = () => {
               type="number"
               min={1}
               value={months}
-              onChange={(e) => setMonths(parseInt(e.target.value) || 1)}
+              onChange={(e) => {
+                const val = e.target.value;
+                // hanya set jika kosong atau angka >=1
+                if (val === "" || (/^\d+$/.test(val) && parseInt(val) >= 1)) {
+                  setMonths(val);
+                }
+              }}
+              placeholder="Masukkan jumlah"
             />
           </div>
 
