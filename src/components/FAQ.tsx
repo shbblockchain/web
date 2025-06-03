@@ -57,15 +57,33 @@ export const FAQ = () => {
         </span>
       </h2>
 
+      <Accordion
+        type="single"
+        collapsible
+        className="w-full AccordionRoot"
+      >
+        {FAQList.map(({ question, answer, value }: FAQProps) => (
+          <AccordionItem
+            key={value}
+            value={value}
+          >
+            <AccordionTrigger className="text-left">
+              {question}
+            </AccordionTrigger>
+
+            <AccordionContent>{answer}</AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion>
 
       <h3 className="font-medium mt-4">
-        Masih Mempunyai Pertanyaan?{" "}
+        Still have questions?{" "}
         <a
           rel="noreferrer noopener"
           href="#"
           className="text-primary transition-all border-primary hover:border-b-2"
         >
-          Hubungi Kami
+          Contact us
         </a>
       </h3>
     </section>
