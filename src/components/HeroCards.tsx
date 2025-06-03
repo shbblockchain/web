@@ -79,8 +79,18 @@ export const HeroCards = () => {
         </CardContent>
 
         <CardFooter>
-          <Button className="w-full">Order Sekarang</Button>
-        </CardFooter>
+  <Button
+    className="w-full"
+    onClick={() => {
+      const message = `Halo, saya ingin memesan paket ${tier} selama ${months} bulan dengan total ${formatRupiah(totalCost)}`;
+      const url = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`;
+      window.open(url, "_blank");
+    }}
+  >
+    Order Sekarang
+  </Button>
+</CardFooter>
+
       </Card>
     </div>
   );
