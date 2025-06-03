@@ -13,6 +13,13 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
+const formatRupiah = (value: number) =>
+  new Intl.NumberFormat("id-ID", {
+    style: "currency",
+    currency: "IDR",
+    minimumFractionDigits: 0,
+  }).format(value);
+
 export const HeroCards = () => {
   const [users] = useState(1);
   const [months, setMonths] = useState(1);
@@ -29,13 +36,15 @@ export const HeroCards = () => {
   const totalCost = monthlyCost * months;
   const unitLabel = tier === "Value" || tier === "Alloy" ? "/ M" : "/ Match";
 
+  const message = `Halo, saya ingin memesan paket ${tier} selama ${months} bulan dengan total ${formatRupiah(totalCost)}`;
+  const whatsappLink = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`;
+
   return (
     <div className="w-full max-w-xl mx-auto">
       <Card className="shadow-lg">
         <CardHeader>
           <CardTitle>Biaya perhitungan</CardTitle>
-          <CardDescription>
-          </CardDescription>
+          <CardDescription></CardDescription>
         </CardHeader>
 
         <CardContent className="space-y-6">
@@ -68,29 +77,20 @@ export const HeroCards = () => {
           </div>
 
           <div className="text-lg font-semibold">
-            RP. {monthlyCost} <span className="text-muted-foreground">{unitLabel}</span>
+            {formatRupiah(monthlyCost)}{" "}
+            <span className="text-muted-foreground">{unitLabel}</span>
           </div>
 
           <div className="text-lg font-bold">
-            Total: RP. {totalCost}{" "}
-            <span className="text-muted-foreground">
-            </span>
+            Total: {formatRupiah(totalCost)}
           </div>
         </CardContent>
 
         <CardFooter>
-  <Button
-    className="w-full"
-    onClick={() => {
-      const message = `Halo, saya ingin memesan paket ${tier} selama ${months} bulan dengan total ${formatRupiah(totalCost)}`;
-      const url = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`;
-      window.open(url, "_blank");
-    }}
-  >
-    Order Sekarang
-  </Button>
-</CardFooter>
-
+          <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full">
+            <Button className="w-full">Order Sekarang</Button>
+          </a>
+        </CardFooter>
       </Card>
     </div>
   );
