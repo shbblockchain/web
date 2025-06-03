@@ -37,7 +37,7 @@ export const HeroCards = () => {
   const unitLabel = tier === "Value" || tier === "Alloy" ? "/ M" : "/ Match";
   const tierLabel = tier === "Value" || tier === "Alloy" ? "M" : "X Joki";
 
-  const message = `Halo, saya ingin memesan paket ${tier} ${tierLabel} untuk ${months} bulan dengan total biaya ${formatRupiah(totalCost)}`;
+  const message = `Halo, saya ingin memesan paket ${tier} untuk ${months} ${tierLabel}  dengan total biaya ${formatRupiah(totalCost)}`;
   const whatsappLink = `https://wa.me/6287711966723?text=${encodeURIComponent(message)}`;
 
 
