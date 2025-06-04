@@ -1139,10 +1139,20 @@ balanced-match@^1.0.0:
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
 
+bean@*:
+  version "1.0.15"
+  resolved "https://registry.yarnpkg.com/bean/-/bean-1.0.15.tgz#b4a9fff82618b071471676c8b190868048c34775"
+  integrity sha512-/X7mF8caOC3qZYSJu62wEJ7AO5/ZIKwwvjBFded5s8IDdRLJSAXfYLJaNPIa/ALThJIWtqtJbbfGbGOjISX1bw==
+
 binary-extensions@^2.0.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-2.3.0.tgz#f6e14a97858d327252200242d4ccfe522c445522"
   integrity sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==
+
+bonzo@*:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/bonzo/-/bonzo-2.0.0.tgz#a871618120acb62d891268377fff809162d159a0"
+  integrity sha512-RQG5bX6VhxP6H8hOcU5LNk9FmfKwppbxVj8J1cVSZcHYyKaxyC+tV5VUhRYzpgsw5AsYmlsQpBLIGu6DPXPngA==
 
 brace-expansion@^1.1.7:
   version "1.1.11"
@@ -1313,6 +1323,11 @@ doctrine@^3.0.0:
   dependencies:
     esutils "^2.0.2"
 
+domready@*:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/domready/-/domready-1.0.8.tgz#91f252e597b65af77e745ae24dd0185d5e26d58c"
+  integrity sha512-uIzsOJUNk+AdGE9a6VDeessoMCzF8RrZvJCX/W8QtyfgdR6Uofn/MvRonih3OtCO79b2VDzDOymuiABrQ4z3XA==
+
 eastasianwidth@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/eastasianwidth/-/eastasianwidth-0.2.0.tgz#696ce2ec0aa0e6ea93a397ffcf24aa7840c827cb"
@@ -1322,6 +1337,11 @@ electron-to-chromium@^1.5.160:
   version "1.5.162"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.162.tgz#5305c15292a960f36e86f8b330da958f8ae1690d"
   integrity sha512-hQA+Zb5QQwoSaXJWEAGEw1zhk//O7qDzib05Z4qTqZfNju/FAkrm5ZInp0JbTp4Z18A6bilopdZWEYrFSsfllA==
+
+emile@*:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/emile/-/emile-1.0.5.tgz#ceb80a35847de588f9f8af1537cfe4fe73a38a42"
+  integrity sha512-G0W2OdvogpS0XgFE3yeSIgQLxNpbrY8ssi+sgvpjENSqkOu2m91caJsprwAtDWKh7rrpa7O1C5HaU9EnnbzA/A==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -1744,6 +1764,16 @@ jackspeak@^3.1.2:
   optionalDependencies:
     "@pkgjs/parseargs" "^0.11.0"
 
+jeesh@*:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/jeesh/-/jeesh-0.0.6.tgz#ddf68d5e28315d0f68832739232d695e5a82fcea"
+  integrity sha512-lGsMRVjOvtd4vAdlM2fq/7oVvls6/gIaDBOiypwYF8O1nhr5pqc2kw74GT4Fp/BBqJtEDA32cOdeMiVRvbMCYQ==
+  dependencies:
+    bean "*"
+    bonzo "*"
+    domready "*"
+    qwery "*"
+
 jiti@^1.21.6:
   version "1.21.7"
   resolved "https://registry.yarnpkg.com/jiti/-/jiti-1.21.7.tgz#9dd81043424a3d28458b193d965f0d18a2300ba9"
@@ -2103,6 +2133,11 @@ queue-microtask@^1.2.2:
   resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
+qwery@*:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/qwery/-/qwery-4.0.0.tgz#7d21e3b4f7e9eed7e68728f4dab4de8b7303febe"
+  integrity sha512-aQapsrAZapZXVbMIUTPsuclkkxU8/nEk3PanYLRu1WaGZoAGxm5BGcq353RVATVfqObBandy8sbAh6gR28TNNg==
+
 react-dom@^18.3.1:
   version "18.3.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.3.1.tgz#c2265d79511b57d479b3dd3fdfa51536494c5cb4"
@@ -2270,6 +2305,14 @@ slash@^3.0.0:
   resolved "https://registry.yarnpkg.com/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
   integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
 
+slider@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/slider/-/slider-1.0.4.tgz#1ce825c3bac72308ae4d5628235c4d0d1688ece2"
+  integrity sha512-Q0D38lVkCeTlnVwPDe3yR2G84LU70LjX46tGF9guyVzKRoq7kc/njUVCEeODpxP1957zCpq3o27gj+hRXTLuSw==
+  dependencies:
+    emile "*"
+    jeesh "*"
+
 source-map-js@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/source-map-js/-/source-map-js-1.2.1.tgz#1ce5650fddd87abc099eda37dcff024c2667ae46"
@@ -2352,6 +2395,11 @@ supports-preserve-symlinks-flag@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
+
+swiper@^11.2.8:
+  version "11.2.8"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-11.2.8.tgz#2b5d7da3093454c0a7bf090f1714fb4332142702"
+  integrity sha512-S5FVf6zWynPWooi7pJ7lZhSUe2snTzqLuUzbd5h5PHUOhzgvW0bLKBd2wv0ixn6/5o9vwc/IkQT74CRcLJQzeg==
 
 tailwind-merge@^2.4.0:
   version "2.6.0"

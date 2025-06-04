@@ -28,7 +28,7 @@ const routeList: RouteProps[] = [
     label: "Pricing",
   },
   {
-    href: "https://google.com",
+    href: "https://www.instagram.com/jendral.store_?igsh=MThkeDh3bDZzYTFuag%3D%3D&utm_source=qr",
     label: "Testimonials",
   },
   {
