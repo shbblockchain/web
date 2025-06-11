@@ -29,7 +29,7 @@ export const HeroCards = () => {
     Value: 10000,
     Alloy: 13000,
     ZeroDam: 15000,
-    SpaceCity: 22000,
+    SpaceCity: 25000,
   };
 
   // Jika input kosong, anggap 1 sebagai default
