@@ -26,8 +26,8 @@ export const HeroCards = () => {
   const [tier, setTier] = useState<"Value" | "Alloy" | "ZeroDam" | "SpaceCity">("Value");
 
   const pricing = {
-    Value: 10000,
-    Alloy: 13000,
+    Value: 13000,
+    Alloy: 17000,
     ZeroDam: 15000,
     SpaceCity: 25000,
   };
